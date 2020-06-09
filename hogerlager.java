@@ -37,7 +37,7 @@ class Vergelijken
 		 {
 				 if (invoer < a)
 				 {
-					 System.out.println("De invoer is kleiner dan het ingevoerde getal, gok opnieuw");
+					 System.out.println("Jouw invoer is kleiner dan het getal van de computer, gok opnieuw");
 						 Scanner scanner = new Scanner (System.in);
 						 String input = scanner.nextLine(); 
 						  invoer = Integer.parseInt(input);
@@ -45,7 +45,7 @@ class Vergelijken
 				 }
 				 if (invoer > a)
 				 {
-					 System.out.println("De invoer is groter dan het ingevoerde getal, gok opnieuw");
+					 System.out.println("Jouw invoer is groter dan het getal van de computer, gok opnieuw");
 					 Scanner scanner = new Scanner (System.in);
 					 String input = scanner.nextLine(); 
 					  invoer = Integer.parseInt(input);
