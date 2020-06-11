@@ -42,7 +42,7 @@ class Invoer
 	
 		while (controle == false)
 		{
-			System.out.println("Voer vier letters in code in, binnen de range A-F en druk op Enter: ....");
+			System.out.println("Voer vier letters in code in, binnen de range A-F en druk op Enter: .... (Sluit het spel met Q).");
 			 result = scanner.next();
 			 result = result.toLowerCase(); // zorgen dat de invoer altijd klein is.
 			
