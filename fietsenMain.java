@@ -17,21 +17,21 @@ double portemonnee = 30;
 boolean platteband = false;
 	
 	void marsEten () {
-		 conditie = conditie+20;
-		 portemonnee = portemonnee -1.20;
-		 System.out.println("MARS. Mmmm dat was lekker, 20 procent extra conditie! Je conditie is nu: " +conditie);
+		 conditie += 20;
+		 portemonnee -= 1.20;
+		 System.out.println("MARS. Mmmm dat was lekker, 20 procent extra conditie! Je conditie is nu: " +conditie + " In je portemonnee zit nu " + portemonnee);
 		
 	 }
 	void bandRepareren (int methode) {
 		if (methode == 0)
 		{ 
 			// laten doen
-			portemonnee = portemonnee -10;
+			portemonnee -= 10;
 			
 		}
 		if (methode == 1)
 		{
-			conditie = conditie -20;
+			conditie -= 20;
 		}
 		platteband = false;
 		System.out.println("Je band is gerepareerd!");
