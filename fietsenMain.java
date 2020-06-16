@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 class Fiets {
 String	merknaam;
@@ -59,20 +60,71 @@ boolean platteband = false;
 }
 
 
+
+class Invoeren {
+	String invoerCheck() {
+		 Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+		 String result ="";
+		boolean controle = false;
+	
+		while (controle == false)
+		{
+			System.out.println("Welkom fietser, hoeveel kilometer wil je op pad gaan? (Voer een heel getal in).");
+			 result = scanner.next();
+			 result = result.toLowerCase(); // zorgen dat de invoer altijd klein is.
+			
+			 if (result.charAt(0) == 'q' || result.charAt(0) == 'Q') {
+				 System.out.println("Je hebt het spel gestopt.");
+				 System.exit(0);
+			 }
+			  
+
+			 if(!result.matches("\\d+")) {
+
+				 System.out.println("Voer een getal in");
+				 continue;
+			 }
+			 int i= Integer.parseInt(result);
+			 if (i >95) {
+				 System.out.println("Het is niet verstandig om zo ver te fietsen. Je kunt niet verder dan 95 kilometer");
+				 continue;
+			 }
+			
+				
+//			
+			
+			 else {
+			controle = true;	 
+			 
+			 }
+    
+
+		}       
+	       return result;
+	}	
+}
+
 public class fietsenMain
 {
 	public static void main(String[] args) { //methode
-	int kilometers = 2;
 	Fietser Remy = new Fietser();
-		Remy.fietsen(28);
-		Remy.fietsen(28);
-		
-		Remy.fietsen(15);
-		Remy.marsEten();
-		Remy.fietsen(15);
-		Remy.fietsen(15);
-		Remy.fietsen(15);
-		Remy.bandRepareren(1);
+//		Remy.fietsen(28);
+//		Remy.fietsen(28);
+//		
+//		Remy.fietsen(15);
+//		Remy.marsEten();
+//		Remy.fietsen(15);
+//		Remy.fietsen(15);
+//		Remy.fietsen(15);
+//		Remy.bandRepareren(1);
+				while (Remy.conditie > 5) //blijven fietsen tot je erbij neervalt
+				{
+				 Invoeren scanner = new Invoeren();
+				 String invoer = scanner.invoerCheck();
+				 int i= Integer.parseInt(invoer);
+				 Remy.fietsen(i);
+				 System.out.println("===============");
+				}
 	}
 }
 
@@ -87,7 +139,7 @@ public class fietsenMain
 // Eet Mars
 // krijg 20% conditie extra
 // kost 1,20 euro
-// Fiets krijgt platte band
+// Fiets krijgt platte band	
 // Fietser moet repareren
 	// laten doen kost 10 euro
 	// zelf doen kost 20% conditie
